@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-dynamic-breadcrumb": [
+        "dist/ng-dynamic-breadcrumb"
+      ],
+      "ng-dynamic-breadcrumb/*": [
+        "dist/ng-dynamic-breadcrumb/*"
+      ]
+    }
   }
 }

@@ -1,0 +1,9 @@
+<ul class="custom-bread-crumb">
+    <span *ngFor="let item of breadcrumb; let i = index">
+        <li>
+            <a *ngIf="item?.url" [routerLink]="item?.url">{{ item.label }}</a>
+            <span *ngIf="!item?.url">{{ item.label }}</span>
+            <span class="line" *ngIf="breadcrumb.length !== i+1"> / </span>
+        </li>
+    </span>
+</ul>

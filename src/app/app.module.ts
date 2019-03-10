@@ -4,13 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { NgDynamicBreadcrumbModule } from '../../projects/ng-dynamic-breadcrumb/src/public_api';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppRoutingModule.components
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgDynamicBreadcrumbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
