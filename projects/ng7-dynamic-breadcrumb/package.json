@@ -1,7 +1,7 @@
 {
   "name": "ng7-dynamic-breadcrumb",
-  "description": "Angular 2/4/5/6/7 Dynamic Breadcrumbs",
-  "version": "1.0.1",
+  "description": "Angular 7 Dynamic Breadcrumb",
+  "version": "1.0.2",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
@@ -25,11 +25,16 @@
     "url": "git+https://github.com/rajaramtt/ng7-dynamic-breadcrumb.git"
   },
   "keywords": [
-    "angular2 breadcrumb ",
+    "angular 2 breadcrumb ",
     "ng7-dynamic-breadcrumb",
     "angular6 breadcrumb",
-    "angular7 breadcrumb",
-    "angular dynamic breadcrumb" 
+    "angular 7 breadcrumb",
+    "angular dynamic breadcrumb" ,
+    "angular breadcrumb",
+    "Breadcrumbs",
+    "angular7 Breadcrumbs",
+    "angular 7 Breadcrumbs"
+
   ],
   "bugs": {
     "url": "https://github.com/rajaramtt/ng7-dynamic-breadcrumb/issues"

@@ -3,7 +3,7 @@
 
 ng7-dynamic-breadcrumb is a module for [Angular](https://angular.io/) that generates a breadcrumb for any page of your application. It is based on the built-in [Angular router](https://angular.io/docs/ts/latest/guide/router.html).
 
-## [Demo  Example ](https://ng7-dynamic-breadcrumb.stackblitz.io)
+## [Demo  Example ](https://ng7-dynamic-breadcrumb.stackblitz.io/)
 ## [Demo  Source Example ](https://stackblitz.com/edit/ng7-dynamic-breadcrumb)
 
 # Usage
