@@ -16,14 +16,14 @@ ng7-dynamic-breadcrumb is a module for [Angular](https://angular.io/) that gener
 npm install --save ng7-dynamic-breadcrumb
 ```
 
-2.Import the `NgDynamicBreadcrumbModule` within your app:
+2.Import the `Ng7DynamicBreadcrumbModule` within your app:
 
 ```js
-import {NgDynamicBreadcrumbModule} from "ng7-dynamic-breadcrumb";
+import {Ng7DynamicBreadcrumbModule} from "ng7-dynamic-breadcrumb";
 
 @NgModule({
   imports: [
-    NgDynamicBreadcrumbModule,
+    Ng7DynamicBreadcrumbModule,
   ],
 })
 ```
@@ -66,7 +66,7 @@ const routes: Routes = [
 ];
 ```
 
-4.Put the `NgDynamicBreadcrumbComponent`'s selector within your template:
+4.Put the `Ng7DynamicBreadcrumbComponent`'s selector within your template:
 
 ```html
 <app-ng7-dynamic-breadcrumb></app-ng7-dynamic-breadcrumb>

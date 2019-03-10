@@ -165,6 +165,76 @@
           }
         }
       }
+    },
+    "ng7-bootstrap-breadcrumb": {
+      "root": "projects/ng7-bootstrap-breadcrumb",
+      "sourceRoot": "projects/ng7-bootstrap-breadcrumb/src",
+      "projectType": "library",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng7-bootstrap-breadcrumb/tsconfig.lib.json",
+            "project": "projects/ng7-bootstrap-breadcrumb/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng7-bootstrap-breadcrumb/src/test.ts",
+            "tsConfig": "projects/ng7-bootstrap-breadcrumb/tsconfig.spec.json",
+            "karmaConfig": "projects/ng7-bootstrap-breadcrumb/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng7-bootstrap-breadcrumb/tsconfig.lib.json",
+              "projects/ng7-bootstrap-breadcrumb/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ng7-mat-breadcrumb": {
+      "root": "projects/ng7-mat-breadcrumb",
+      "sourceRoot": "projects/ng7-mat-breadcrumb/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng7-mat-breadcrumb/tsconfig.lib.json",
+            "project": "projects/ng7-mat-breadcrumb/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng7-mat-breadcrumb/src/test.ts",
+            "tsConfig": "projects/ng7-mat-breadcrumb/tsconfig.spec.json",
+            "karmaConfig": "projects/ng7-mat-breadcrumb/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng7-mat-breadcrumb/tsconfig.lib.json",
+              "projects/ng7-mat-breadcrumb/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng7-dynamic-breadcrumb-lib"

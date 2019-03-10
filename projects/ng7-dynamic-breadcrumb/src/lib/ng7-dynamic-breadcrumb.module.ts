@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { NgDynamicBreadcrumbComponent } from './ng7-dynamic-breadcrumb.component';
+import { Ng7DynamicBreadcrumbComponent } from './ng7-dynamic-breadcrumb.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [NgDynamicBreadcrumbComponent],
+  declarations: [Ng7DynamicBreadcrumbComponent],
   imports: [
     RouterModule,
     CommonModule
   ],
-  exports: [NgDynamicBreadcrumbComponent]
+  exports: [Ng7DynamicBreadcrumbComponent]
 })
-export class NgDynamicBreadcrumbModule { }
+export class Ng7DynamicBreadcrumbModule { }

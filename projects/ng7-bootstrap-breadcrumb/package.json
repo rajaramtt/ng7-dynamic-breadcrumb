@@ -1,10 +1,11 @@
 {
-  "name": "ng7-dynamic-breadcrumb",
-  "description": "Angular 7 Dynamic Breadcrumb",
-  "version": "1.0.3",
+  "name": "ng7-bootstrap-breadcrumb",
+  "description": "Angular7 bootstrap  Dynamic Breadcrumb",
+  "version": "1.0.1",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
-    "@angular/core": "^7.2.0"
+    "@angular/core": "^7.2.0",
+    "bootstrap": "^4.0.0"
   },
   "main": "bundles/ng7-dynamic-breadcrumb.umd.js",
   "module": "fesm5/ng7-dynamic-breadcrumb.js",
@@ -33,8 +34,9 @@
     "angular breadcrumb",
     "Breadcrumbs",
     "angular7 Breadcrumbs",
-    "angular 7 Breadcrumbs"
-
+    "angular 7 Breadcrumbs",
+    "Angular bootstrap breadcrumb",
+    "Angular bootstrap Breadcrumbs"
   ],
   "bugs": {
     "url": "https://github.com/rajaramtt/ng7-dynamic-breadcrumb/issues"

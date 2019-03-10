@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-// import { NgDynamicBreadcrumbModule } from '../../projects/ng7-dynamic-breadcrumb/src/public_api';
+// import { Ng7DynamicBreadcrumbModule } from '../../projects/ng7-dynamic-breadcrumb/src/public_api';
 
-import {NgDynamicBreadcrumbModule} from 'ng7-dynamic-breadcrumb';
+import {Ng7DynamicBreadcrumbModule} from 'ng7-dynamic-breadcrumb';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import {NgDynamicBreadcrumbModule} from 'ng7-dynamic-breadcrumb';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgDynamicBreadcrumbModule
+    Ng7DynamicBreadcrumbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
