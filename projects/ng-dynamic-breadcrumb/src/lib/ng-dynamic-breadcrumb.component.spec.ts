@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgDynamicBreadcrumbComponent } from './ng-dynamic-breadcrumb.component';
+import { NgDynamicBreadcrumbComponent } from './ng7-dynamic-breadcrumb.component';
 
 describe('NgDynamicBreadcrumbComponent', () => {
   let component: NgDynamicBreadcrumbComponent;

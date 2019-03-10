@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to ng-dynamic-breadcrumb-lib!');
+    expect(page.getTitleText()).toEqual('Welcome to ng7-dynamic-breadcrumb-lib!');
   });
 
   afterEach(async () => {

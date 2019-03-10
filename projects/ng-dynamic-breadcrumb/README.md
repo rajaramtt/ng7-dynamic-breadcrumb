@@ -1,25 +1,25 @@
-# ng-dynamic-breadcrumb
+# ng7-dynamic-breadcrumb
 
 
-ng-dynamic-breadcrumb is a module for [Angular](https://angular.io/) that generates a breadcrumb for any page of your application. It is based on the built-in [Angular router](https://angular.io/docs/ts/latest/guide/router.html).
+ng7-dynamic-breadcrumb is a module for [Angular](https://angular.io/) that generates a breadcrumb for any page of your application. It is based on the built-in [Angular router](https://angular.io/docs/ts/latest/guide/router.html).
 
-## [Demo  Example ](https://ng-dynamic-breadcrumb.stackblitz.io)
-## [Demo  Source Example ](https://stackblitz.com/edit/ng-dynamic-breadcrumb)
+## [Demo  Example ](https://ng7-dynamic-breadcrumb.stackblitz.io)
+## [Demo  Source Example ](https://stackblitz.com/edit/ng7-dynamic-breadcrumb)
 
 # Usage
 
 ## Getting started
 
-1.Install `ng-dynamic-breadcrumb` via npm:
+1.Install `ng7-dynamic-breadcrumb` via npm:
 
 ```bash
-npm install --save ng-dynamic-breadcrumb
+npm install --save ng7-dynamic-breadcrumb
 ```
 
 2.Import the `NgDynamicBreadcrumbModule` within your app:
 
 ```js
-import {NgDynamicBreadcrumbModule} from "ng-dynamic-breadcrumb";
+import {NgDynamicBreadcrumbModule} from "ng7-dynamic-breadcrumb";
 
 @NgModule({
   imports: [
@@ -69,7 +69,7 @@ const routes: Routes = [
 4.Put the `NgDynamicBreadcrumbComponent`'s selector within your template:
 
 ```html
-<app-ng-dynamic-breadcrumb></app-ng-dynamic-breadcrumb>
+<app-ng7-dynamic-breadcrumb></app-ng7-dynamic-breadcrumb>
 <router-outlet></router-outlet>
 ```
 

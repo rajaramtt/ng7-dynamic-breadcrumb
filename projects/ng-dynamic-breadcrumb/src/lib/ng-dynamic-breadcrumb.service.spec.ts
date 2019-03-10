@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NgDynamicBreadcrumbService } from './ng-dynamic-breadcrumb.service';
+import { NgDynamicBreadcrumbService } from './ng7-dynamic-breadcrumb.service';
 
 describe('NgDynamicBreadcrumbService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

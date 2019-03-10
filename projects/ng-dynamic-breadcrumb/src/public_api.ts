@@ -1,7 +1,7 @@
 /*
- * Public API Surface of ng-dynamic-breadcrumb
+ * Public API Surface of ng7-dynamic-breadcrumb
  */
 
-export * from './lib/ng-dynamic-breadcrumb.service';
-export * from './lib/ng-dynamic-breadcrumb.component';
-export * from './lib/ng-dynamic-breadcrumb.module';
+export * from './lib/ng7-dynamic-breadcrumb.service';
+export * from './lib/ng7-dynamic-breadcrumb.component';
+export * from './lib/ng7-dynamic-breadcrumb.module';

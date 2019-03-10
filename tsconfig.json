@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "ng-dynamic-breadcrumb": [
-        "dist/ng-dynamic-breadcrumb"
+      "ng7-dynamic-breadcrumb": [
+        "dist/ng7-dynamic-breadcrumb"
       ],
-      "ng-dynamic-breadcrumb/*": [
-        "dist/ng-dynamic-breadcrumb/*"
+      "ng7-dynamic-breadcrumb/*": [
+        "dist/ng7-dynamic-breadcrumb/*"
       ]
     }
   }

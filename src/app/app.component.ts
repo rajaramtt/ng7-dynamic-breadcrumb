@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-dynamic-breadcrumb-lib';
+  title = 'ng7-dynamic-breadcrumb-lib';
 }

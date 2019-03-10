@@ -5,9 +5,9 @@ import { map, mergeMap } from 'rxjs/internal/operators';
 import { Breadcrumb } from './breadcrumb.model';
 
 @Component({
-  selector: 'app-ng-dynamic-breadcrumb',
-  templateUrl: './ng-dynamic-breadcrumb.component.html',
-  styleUrls: ['./ng-dynamic-breadcrumb.component.css']
+  selector: 'app-ng7-dynamic-breadcrumb',
+  templateUrl: './ng7-dynamic-breadcrumb.component.html',
+  styleUrls: ['./ng7-dynamic-breadcrumb.component.css']
 })
 export class NgDynamicBreadcrumbComponent implements OnInit {
 
