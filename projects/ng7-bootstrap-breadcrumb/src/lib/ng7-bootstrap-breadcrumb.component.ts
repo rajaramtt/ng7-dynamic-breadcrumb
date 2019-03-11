@@ -41,8 +41,8 @@ export class Ng7BootstrapBreadcrumbComponent implements OnInit {
             for (const chunk of urlChunks) {
               if (chunk.includes(':')) {
                 const paramID = chunk.replace(':', '');
-                const pharmacistID = route.snapshot.params[paramID];
-                crumb.url = crumb.url.replace(`:${paramID}`, pharmacistID);
+                const routerParamID = route.snapshot.params[paramID];
+                crumb.url = crumb.url.replace(`:${paramID}`, routerParamID);
               }
             }
           });
