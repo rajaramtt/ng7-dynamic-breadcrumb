@@ -1,8 +1,33 @@
 {
   "name": "ng7-mat-breadcrumb",
-  "version": "0.0.1",
+  "description": "Angular7  Material  Breadcrumb NPM Module",
+  "version": "1.0.1",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
-    "@angular/core": "^7.2.0"
-  }
+    "@angular/core": "^7.2.0",
+    "@angular/material": "^7.2.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajaramtt/ng7-dynamic-breadcrumb.git"
+  },
+  "keywords": [
+    "angular 2 breadcrumb ",
+    "ng7-mat-breadcrumb",
+    "angular6 material breadcrumb",
+    "angular 7 breadcrumb",
+    "angular dynamic breadcrumb",
+    "angular material breadcrumb",
+    "Breadcrumbs",
+    "angular7 material Breadcrumbs",
+    "angular 7 material "
+  ],
+  "bugs": {
+    "url": "https://github.com/rajaramtt/ng7-dynamic-breadcrumb/issues"
+  },
+  "author": "Raja Rama Mohan Thavalam",
+  "contributors": [
+    "Raja Rama Mohan Thavalam <rajarm.tavalam@gmail.com>"
+  ]
 }

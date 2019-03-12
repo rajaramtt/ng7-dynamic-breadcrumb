@@ -205,7 +205,7 @@
       "root": "projects/ng7-mat-breadcrumb",
       "sourceRoot": "projects/ng7-mat-breadcrumb/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

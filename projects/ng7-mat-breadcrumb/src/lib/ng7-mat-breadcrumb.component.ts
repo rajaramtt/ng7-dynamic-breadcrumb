@@ -1,19 +1,54 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router, NavigationEnd, PRIMARY_OUTLET, RoutesRecognized } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { map, mergeMap } from 'rxjs/internal/operators';
+import { Breadcrumb } from './breadcrumb.model';
 @Component({
-  selector: 'lib-ng7-mat-breadcrumb',
-  template: `
-    <p>
-      ng7-mat-breadcrumb works!
-    </p>
-  `,
-  styles: []
+  selector: 'app-ng7-mat-breadcrumb',
+  templateUrl: './ng7-mat-breadcrumb.component.html',
+  styleUrls: ['./ng7-mat-breadcrumb.component.css']
 })
 export class Ng7MatBreadcrumbComponent implements OnInit {
+  breadcrumb: Breadcrumb[] = [];
 
-  constructor() { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) {
+    this.breadCrumbData();
+  }
 
   ngOnInit() {
   }
 
+  breadCrumbData() {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .pipe(map(() => this.activatedRoute))
+      .pipe(map((route) => {
+        while (route.firstChild) { route = route.firstChild; }
+        return route;
+      }))
+      .pipe(filter(route => route.outlet === PRIMARY_OUTLET))
+      .subscribe(route => {
+
+        if (route.snapshot.data.breadcrumb) {
+          const breadcrumb = (JSON.parse(JSON.stringify(route.snapshot.data.breadcrumb)));
+          breadcrumb.map((crumb) => {
+            const urlChunks = crumb.url.split('/');
+
+            for (const chunk of urlChunks) {
+              if (chunk.includes(':')) {
+                const paramID = chunk.replace(':', '');
+                const routerParamID = route.snapshot.params[paramID];
+                crumb.url = crumb.url.replace(`:${paramID}`, routerParamID);
+              }
+            }
+          });
+          this.breadcrumb = breadcrumb;
+        } else {
+          this.breadcrumb = [];
+        }
+      });
+  }
 }

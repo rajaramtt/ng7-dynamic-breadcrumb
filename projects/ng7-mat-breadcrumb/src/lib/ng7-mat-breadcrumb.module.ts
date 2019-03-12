@@ -1,9 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Ng7MatBreadcrumbComponent } from './ng7-mat-breadcrumb.component';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [Ng7MatBreadcrumbComponent],
   imports: [
+    RouterModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatListModule
   ],
   exports: [Ng7MatBreadcrumbComponent]
 })

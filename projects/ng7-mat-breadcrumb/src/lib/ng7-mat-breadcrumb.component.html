@@ -1,0 +1,13 @@
+<mat-toolbar class="mat-bread-crumb">
+    <mat-list class="mat-bread-crumb-list" *ngIf="breadcrumb.length">
+        <mat-list-item>
+            <span class="mat-bread-crumb-spacer">
+                <span *ngFor="let item of breadcrumb; let i = index">
+                    <a *ngIf="item?.url" [routerLink]="item?.url" class="mat-bread-crumb-list-item">{{ item.label }}</a>
+                    <span *ngIf="!item?.url" class="mat-bread-crumb-list-item">{{ item.label }}</span>
+                    <span *ngIf="breadcrumb.length !== i+1"> / </span>
+                </span>
+            </span>
+        </mat-list-item>
+    </mat-list>
+</mat-toolbar>

@@ -1,0 +1,17 @@
+
+.mat-bread-crumb {
+    height: 30px;
+    background-color: rgb(241, 239, 235);
+  }
+  .mat-bread-crumb-list{
+    padding-bottom: 10px;
+    
+  }
+  .mat-bread-crumb-list-item{
+    font-size: 15px;
+  }
+
+  .mat-bread-crumb-spacer {
+    margin-left: -20px;
+  }
+
