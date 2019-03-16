@@ -1,77 +1,27 @@
-# ng7-dynamic-breadcrumb
-
+# ng7-dynamic-breadcrumb (for all Angular application)
 
 ng7-dynamic-breadcrumb is a module for [Angular](https://angular.io/) that generates a breadcrumb for any page of your application. It is based on the built-in [Angular router](https://angular.io/docs/ts/latest/guide/router.html).
 
-## [Demo  Example ](https://ng7-dynamic-breadcrumb.stackblitz.io/)
-## [Demo  Source Example ](https://stackblitz.com/edit/ng7-dynamic-breadcrumb)
+## [ Github Link ](https://github.com/rajaramtt/ng7-dynamic-breadcrumb/tree/master/projects/ng7-dynamic-breadcrumb)
+## [NPM Module  ](https://www.npmjs.com/package/ng7-dynamic-breadcrumb)
 
-# Usage
 
-## Getting started
+# ng7-bootstrap-breadcrumb (for Angular Bootstrap application)
 
-1.Install `ng7-dynamic-breadcrumb` via npm:
+ng7-bootstrap-breadcrumb is a Angular7 bootstrap module for [Angular](https://angular.io/) that generates a Angular7 bootstrap breadcrumb for any page of your application. It is based on the built-in [Angular router](https://angular.io/docs/ts/latest/guide/router.html).
 
-```bash
-npm install --save ng7-dynamic-breadcrumb
-```
+## [ Github Link ](https://github.com/rajaramtt/ng7-dynamic-breadcrumb/tree/master/projects/ng7-bootstrap-breadcrumb)
+## [NPM Module  ](https://www.npmjs.com/package/ng7-bootstrap-breadcrumb)
 
-2.Import the `Ng7DynamicBreadcrumbModule` within your app:
 
-```js
-import {Ng7DynamicBreadcrumbModule} from "ng7-dynamic-breadcrumb";
+# ng7-mat-breadcrumb (for Angular Material application)
 
-@NgModule({
-  imports: [
-    Ng7DynamicBreadcrumbModule,
-  ],
-})
-```
+ng7-mat-breadcrumb is a Angular Material module for [Angular](https://angular.io/) that generates a Angular Material breadcrumb for any page of your application. It is based on the built-in [Angular router](https://angular.io/docs/ts/latest/guide/router.html).
 
-3.Add a name to your route by adding a `breadcrumb` property in the route's `data`:
+## [Github Link](https://github.com/rajaramtt/ng7-dynamic-breadcrumb/tree/master/projects/ng7-mat-breadcrumb)
+## [NPM Module ](https://www.npmjs.com/package/ng7-mat-breadcrumb)
 
-```js
-const routes: Routes = [
-  {
-    path: 'page1/:pageOneID',
-    component: PageComponent,
-    data: {
-      title: 'page1',
-      breadcrumb: [
-        {
-          label: 'Page1',
-          url: ''
-        }
-      ]
-    },
-  },
-  {
-    path: 'page1/:pageOneID/page2/:pageTwoID',
-    component: Page2Component,
-    data: {
-      title: 'page2',
-      breadcrumb: [
-        {
-          label: 'page1',
-          url: '/page1/:pageOneID'
-        },
-        {
-          label: 'page2',
-          url: ''
-        }
-      ]
-    },
-  },
 
-];
-```
-
-4.Put the `Ng7DynamicBreadcrumbComponent`'s selector within your template:
-
-```html
-<app-ng7-dynamic-breadcrumb></app-ng7-dynamic-breadcrumb>
-<router-outlet></router-outlet>
-```
 
 ## Help/Assistance
 
