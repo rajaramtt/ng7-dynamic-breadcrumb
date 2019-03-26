@@ -42,15 +42,15 @@ const routes: Routes = [
       title: 'page3',
       breadcrumb: [
         {
-          label: 'page1',
+          label: 'page {{pageOneID}}',
           url: '/page1/:pageOneID'
         },
         {
-          label: 'page2',
+          label: 'page {{pageTwoID}}',
           url: 'page1/:pageOneID/page2/:pageTwoID'
         },
         {
-          label: 'page3',
+          label: 'page {{customText}}',
           url: ''
         }
       ]

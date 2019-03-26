@@ -32,7 +32,7 @@ import {Ng7MatBreadcrumbModule} from "ng7-mat-breadcrumb";
 
 ```js
 const routes: Routes = [
-  {
+ {
     path: 'page1/:pageOneID',
     component: PageComponent,
     data: {
@@ -62,6 +62,27 @@ const routes: Routes = [
       ]
     },
   },
+  {
+    path: 'page1/:pageOneID/page2/:pageTwoID/page3/:pageThreeID',
+    component: Page3Component,
+    data: {
+      title: 'page3',
+      breadcrumb: [
+        {
+          label: 'page {{pageOneID}}',
+          url: '/page1/:pageOneID'
+        },
+        {
+          label: 'page {{pageTwoID}}',// Dynamic parameter labels
+          url: 'page1/:pageOneID/page2/:pageTwoID'
+        },
+        {
+          label: 'page {{customText}}', // Custom Text update form the  componet level, More info check the 5th point
+          url: ''
+        }
+      ]
+    },
+  },
 
 ];
 ```
@@ -73,6 +94,14 @@ const routes: Routes = [
 <router-outlet></router-outlet>
 ```
 
+5. Update the `Ng7MatBreadcrumbService` for custom label text
+```html
+  constructor(private ng7MatBreadcrumbService: Ng7MatBreadcrumbService) { }
+ngOnInit() {
+    const breadcrumb =  {customText: 'This is the Custom Text'};
+    this.ng7MatBreadcrumbService.updateBreadcrumbLabels(breadcrumb);
+  }
+```
 ## Help/Assistance
 
 Developer: Raja Rama Mohan Thavalam <rajaram.tavalam@gmail.com>  

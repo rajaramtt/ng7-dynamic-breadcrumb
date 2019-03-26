@@ -3,6 +3,8 @@ import { ActivatedRoute, Router, NavigationEnd, PRIMARY_OUTLET, RoutesRecognized
 import { filter } from 'rxjs/operators';
 import { map, mergeMap } from 'rxjs/internal/operators';
 import { Breadcrumb } from './breadcrumb.model';
+import { Ng7MatBreadcrumbService } from './ng7-mat-breadcrumb.service';
+import { from } from 'rxjs';
 @Component({
   selector: 'app-ng7-mat-breadcrumb',
   templateUrl: './ng7-mat-breadcrumb.component.html',
@@ -13,12 +15,31 @@ export class Ng7MatBreadcrumbComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private ng7MatBreadcrumbService: Ng7MatBreadcrumbService
   ) {
     this.breadCrumbData();
   }
 
   ngOnInit() {
+    this.ng7MatBreadcrumbService.breadcrumbLabels.subscribe((labelData) => {
+      for (const label in labelData) {
+        if (labelData.hasOwnProperty(label)) {
+          this.breadcrumb.map((crumb) => {
+            const labelParams = crumb.label.match(/[^{{]+(?=\}})/g);
+            if (labelParams) {
+              for (const labelParam of labelParams) {
+                const dyanmicData = labelData[label];
+                if (labelParam === label) {
+                  crumb.label = crumb.label.replace('{{' + labelParam + '}}', dyanmicData);
+                }
+              }
+            }
+          });
+        }
+      }
+
+    });
   }
 
   breadCrumbData() {
@@ -36,7 +57,6 @@ export class Ng7MatBreadcrumbComponent implements OnInit {
           const breadcrumb = (JSON.parse(JSON.stringify(route.snapshot.data.breadcrumb)));
           breadcrumb.map((crumb) => {
             const urlChunks = crumb.url.split('/');
-
             for (const chunk of urlChunks) {
               if (chunk.includes(':')) {
                 const paramID = chunk.replace(':', '');
@@ -44,6 +64,19 @@ export class Ng7MatBreadcrumbComponent implements OnInit {
                 crumb.url = crumb.url.replace(`:${paramID}`, routerParamID);
               }
             }
+
+            const labelParams = crumb.label.match(/[^{{]+(?=\}})/g);
+            if (labelParams) {
+              for (const labelParam of labelParams) {
+                const routerParamID = route.snapshot.params[labelParam.trim()];
+                if (routerParamID) {
+                  crumb.label = crumb.label.replace('{{' + labelParam + '}}', routerParamID);
+                } else {
+                  // crumb.label = crumb.label.replace('{{' + labelParam + '}}', '');
+                }
+              }
+            }
+
           });
           this.breadcrumb = breadcrumb;
         } else {
