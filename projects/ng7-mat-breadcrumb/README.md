@@ -96,7 +96,7 @@ const routes: Routes = [
 5.Set the value using `Ng7MatBreadcrumbService`
 
 ```js
-import { Ng7MatBreadcrumbService } from "ng7-mat-breadcrumb";
+import { Ng7MatBreadcrumbService } from 'ng7-mat-breadcrumb';
 constructor(private ng7MatBreadcrumbService: Ng7MatBreadcrumbService) { }
 ngOnInit() {
   const breadcrumb =  {customText: 'This is Custom Text', dynamicText: 'Level 2 '};

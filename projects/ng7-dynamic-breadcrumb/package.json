@@ -1,7 +1,7 @@
 {
   "name": "ng7-dynamic-breadcrumb",
   "description": "Angular 7 Dynamic Breadcrumb",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
