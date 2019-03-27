@@ -32,7 +32,7 @@ import {Ng7MatBreadcrumbModule} from "ng7-mat-breadcrumb";
 
 ```js
 const routes: Routes = [
- {
+  {
     path: 'page1/:pageOneID',
     component: PageComponent,
     data: {
@@ -49,14 +49,14 @@ const routes: Routes = [
     path: 'page1/:pageOneID/page2/:pageTwoID',
     component: Page2Component,
     data: {
-      title: 'page2',
+      title: 'page2', 
       breadcrumb: [
         {
-          label: 'page1',
+          label: 'page {{pageOneID}}',// pageOneID Parameter value will be add 
           url: '/page1/:pageOneID'
         },
         {
-          label: 'page2',
+          label: 'page {{pageTwoID}}',// pageTwoID Parameter value will be add 
           url: ''
         }
       ]
@@ -69,21 +69,20 @@ const routes: Routes = [
       title: 'page3',
       breadcrumb: [
         {
-          label: 'page {{pageOneID}}',
+          label: 'page1',
           url: '/page1/:pageOneID'
         },
         {
-          label: 'page {{pageTwoID}}',// Dynamic parameter labels
+          label: '{{dynamicText}} page', // If "dynamicText" is not parameter , should be set value  using Ng7MatBreadcrumbService, More info please check the 5th point.
           url: 'page1/:pageOneID/page2/:pageTwoID'
         },
         {
-          label: 'page {{customText}}', // Custom Text update form the  componet level, More info check the 5th point
+          label: '{{customText}}', // If "customText" is not parameter , should be set value  using Ng7MatBreadcrumbService, More info please check the 5th point.
           url: ''
         }
       ]
     },
   },
-
 ];
 ```
 
@@ -94,12 +93,14 @@ const routes: Routes = [
 <router-outlet></router-outlet>
 ```
 
-5. Update the `Ng7MatBreadcrumbService` for custom label text
-```html
-  constructor(private ng7MatBreadcrumbService: Ng7MatBreadcrumbService) { }
+5.Set the value using `Ng7MatBreadcrumbService`
+
+```js
+import { Ng7MatBreadcrumbService } from "ng7-mat-breadcrumb";
+constructor(private ng7MatBreadcrumbService: Ng7MatBreadcrumbService) { }
 ngOnInit() {
-    const breadcrumb =  {customText: 'This is the Custom Text'};
-    this.ng7MatBreadcrumbService.updateBreadcrumbLabels(breadcrumb);
+  const breadcrumb =  {customText: 'This is Custom Text', dynamicText: 'Level 2 '};
+  this.ng7MatBreadcrumbService.updateBreadcrumbLabels(breadcrumb);
   }
 ```
 ## Help/Assistance
