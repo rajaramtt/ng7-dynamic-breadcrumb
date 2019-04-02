@@ -13,6 +13,13 @@ import { Ng7DynamicBreadcrumbService } from './ng7-dynamic-breadcrumb.service';
 export class Ng7DynamicBreadcrumbComponent implements OnInit {
 
   breadcrumb: Breadcrumb[] = [];
+  @Input() bgColor = '#eee';
+  @Input() fontSize = '18px';
+  @Input() fontColor = '#0275d8';
+  @Input() lastLinkColor = '#000';
+  @Input() symbol = ' / ';
+
+
 
   constructor(
     private activatedRoute: ActivatedRoute,

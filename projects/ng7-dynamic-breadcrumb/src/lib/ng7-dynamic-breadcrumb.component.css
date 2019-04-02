@@ -2,18 +2,18 @@
   .custom-bread-crumb {
     padding: 10px 16px;
     list-style: none;
-    background-color: #eee;
+    /* background-color: #eee; */
   }
   .custom-bread-crumb li {
     display: inline;
-    font-size: 18px;
+    /* font-size: 18px; */
   }
   .custom-bread-crumb .line {
     padding-right: 3px;
 
   }
   .custom-bread-crumb li a {
-    color: #0275d8;
+    /* color: #0275d8; */
     text-decoration: none;
   }
   .custom-bread-crumb li a:hover {

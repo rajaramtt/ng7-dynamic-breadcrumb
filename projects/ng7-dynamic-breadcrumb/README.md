@@ -89,10 +89,36 @@ const routes: Routes = [
 
 4.Put the `Ng7DynamicBreadcrumbComponent`'s selector within your template:
 
+
 ```html
+
 <app-ng7-dynamic-breadcrumb></app-ng7-dynamic-breadcrumb>
 <router-outlet></router-outlet>
+
+  <!-- breadcrumbConfig: object = {
+    bgColor: '#eee',
+    fontSize: '18px',
+    fontColor: '#0275d8',
+    lastLinkColor: '#000',
+    symbol: ' / ',
+  }; -->
+<!-- <app-ng7-dynamic-breadcrumb [bgColor]="'#eee'" [fontSize]="'18px'" [fontColor]="'#0275d8'" [lastLinkColor]="'#000'" [symbol]="' << '"></app-ng7-dynamic-breadcrumb> -->
+
+<!-- <app-ng7-dynamic-breadcrumb [bgColor]="breadcrumbConfig['bgColor']" [fontSize]="breadcrumbConfig['fontSize']" [fontColor]="breadcrumbConfig['fontColor']" [lastLinkColor]="breadcrumbConfig['lastLinkColor']" [symbol]="breadcrumbConfig['symbol']"></app-ng7-dynamic-breadcrumb> -->
 ```
+
+
+## Input parameters
+
+| Input | Required | Details |
+| ---- | ---- | ---- |
+| bgColor | Optional | To set background-color for  Breadcrumb, default #eee |
+| fontSize | Optional | To set size of  Breadcrumb,  default 18px |
+| fontColor | Optional | To set color of  Breadcrumb,  default #0275d8 |
+| lastLinkColor | Optional | To set color of last link  Breadcrumb,  default #000 |
+| symbol | Optional | To set symbol of Breadcrumb,  default / |
+
+
 
 5.Set the value using `Ng7DynamicBreadcrumbService`
 
