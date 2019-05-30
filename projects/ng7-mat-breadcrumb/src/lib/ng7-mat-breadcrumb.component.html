@@ -3,8 +3,8 @@
         <mat-list-item>
             <span class="mat-bread-crumb-spacer">
                 <span *ngFor="let item of breadcrumb; let i = index">
-                    <a *ngIf="item?.url" [routerLink]="item?.url" class="mat-bread-crumb-list-item">{{ item.label }}</a>
-                    <span *ngIf="!item?.url" class="mat-bread-crumb-list-item">{{ item.label }}</span>
+                    <a *ngIf="item?.url" [routerLink]="item?.url" class="mat-bread-crumb-list-item">{{ item.displayText }}</a>
+                    <span *ngIf="!item?.url" class="mat-bread-crumb-list-item">{{ item.displayText }}</span>
                     <span *ngIf="breadcrumb.length !== i+1"> / </span>
                 </span>
             </span>
