@@ -1,11 +1,11 @@
 {
   "name": "ng7-bootstrap-breadcrumb",
-  "description": "Angular7 bootstrap  Dynamic Breadcrumb",
-  "version": "1.0.4",
+  "description": "Angular 8 bootstrap  Dynamic Breadcrumb",
+  "version": "2.0.0",
   "peerDependencies": {
-    "@angular/common": "^7.2.0",
-    "@angular/core": "^7.2.0",
-    "bootstrap": "^4.0.0"
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0",
+    "bootstrap": "^4.3.1"
   },
   "main": "bundles/ng7-dynamic-breadcrumb.umd.js",
   "module": "fesm5/ng7-dynamic-breadcrumb.js",
@@ -18,6 +18,7 @@
   "metadata": "ng7-dynamic-breadcrumb.metadata.json",
   "sideEffects": false,
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "tslib": "^1.9.0"
   },
   "license": "MIT",
@@ -30,11 +31,14 @@
     "ng7-dynamic-breadcrumb",
     "angular6 breadcrumb",
     "angular 7 breadcrumb",
-    "angular dynamic breadcrumb" ,
+    "angular 8 breadcrumb",
+    "angular dynamic breadcrumb",
     "angular breadcrumb",
     "Breadcrumbs",
     "angular7 Breadcrumbs",
     "angular 7 Breadcrumbs",
+    "angular8 Breadcrumbs",
+    "angular 8 Breadcrumbs",
     "Angular bootstrap breadcrumb",
     "Angular bootstrap Breadcrumbs"
   ],

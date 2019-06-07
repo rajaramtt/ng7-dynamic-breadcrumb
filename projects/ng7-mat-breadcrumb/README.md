@@ -16,6 +16,14 @@ ng7-mat-breadcrumb is a Angular Material module for [Angular](https://angular.io
 npm install --save ng7-mat-breadcrumb
 ```
 
+Choose the version corresponding to your Angular version:
+
+ Angular     | ng7-mat-breadcrumb 
+ ----------- | ------------------- 
+ 8           | 2.x+               
+ 7           | 1.x               
+      
+
 2.Import the `Ng7MatBreadcrumbModule` within your app:
 
 ```js

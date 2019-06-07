@@ -4,11 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-//  import { Ng7MatBreadcrumbModule } from '../../projects/ng7-mat-breadcrumb/src/public_api';
-
+// import { Ng7MatBreadcrumbModule } from '../../projects/ng7-mat-breadcrumb/src/public_api';
 // import {Ng7DynamicBreadcrumbModule} from 'ng7-dynamic-breadcrumb';
-
 import { Ng7DynamicBreadcrumbModule } from '../../projects/ng7-dynamic-breadcrumb/src/public_api';
+// import { Ng7BootstrapBreadcrumbModule } from '../../projects/ng7-bootstrap-breadcrumb/src/public_api';
 
 @NgModule({
   declarations: [
@@ -18,8 +17,9 @@ import { Ng7DynamicBreadcrumbModule } from '../../projects/ng7-dynamic-breadcrum
   imports: [
     BrowserModule,
     AppRoutingModule,
-    Ng7DynamicBreadcrumbModule
-    // Ng7MatBreadcrumbModule
+    // Ng7BootstrapBreadcrumbModule
+   Ng7DynamicBreadcrumbModule
+  // Ng7MatBreadcrumbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

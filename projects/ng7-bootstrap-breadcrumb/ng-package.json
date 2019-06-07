@@ -3,5 +3,7 @@
   "dest": "../../dist/ng7-bootstrap-breadcrumb",
   "lib": {
     "entryFile": "src/public_api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["."]
+
 }

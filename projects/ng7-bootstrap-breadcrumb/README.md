@@ -15,6 +15,12 @@ ng7-bootstrap-breadcrumb is a Angular7 bootstrap module for [Angular](https://an
 ```bash
 npm install --save ng7-bootstrap-breadcrumb
 ```
+Choose the version corresponding to your Angular version:
+
+ Angular     | ng7-bootstrap-breadcrumb
+ ----------- | ------------------- 
+ 8           | 2.x+               
+ 7           | 1.x   
 
 2.Import the `Ng7BootstrapBreadcrumbModule` within your app:
 
