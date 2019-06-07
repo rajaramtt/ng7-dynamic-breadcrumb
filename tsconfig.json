@@ -36,6 +36,12 @@
       ],
       "ng7-mat-breadcrumb/*": [
         "dist/ng7-mat-breadcrumb/*"
+      ],
+      "ng-dynamic-breadcrumb": [
+        "dist/ng-dynamic-breadcrumb"
+      ],
+      "ng-dynamic-breadcrumb/*": [
+        "dist/ng-dynamic-breadcrumb/*"
       ]
     }
   }

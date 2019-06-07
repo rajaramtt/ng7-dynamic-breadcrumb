@@ -1,0 +1,49 @@
+{
+  "name": "ng-dynamic-breadcrumb",
+  "description": "Angular 8 Dynamic Breadcrumb",
+  "version": "2.0.0",
+  "peerDependencies": {
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0"
+  },
+  "main": "bundles/ng-dynamic-breadcrumb.umd.js",
+  "module": "fesm5/ng-dynamic-breadcrumb.js",
+  "es2015": "fesm2015/ng-dynamic-breadcrumb.js",
+  "esm5": "esm5/ng-dynamic-breadcrumb.js",
+  "esm2015": "esm2015/ng-dynamic-breadcrumb.js",
+  "fesm5": "fesm5/ng-dynamic-breadcrumb.js",
+  "fesm2015": "fesm2015/ng-dynamic-breadcrumb.js",
+  "typings": "ng-dynamic-breadcrumb.d.ts",
+  "metadata": "ng-dynamic-breadcrumb.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajaramtt/ng7-dynamic-breadcrumb.git"
+  },
+  "keywords": [
+    "angular 2 breadcrumb ",
+    "ng-dynamic-breadcrumb",
+    "angular6 breadcrumb",
+    "angular 7 breadcrumb",
+    "angular dynamic breadcrumb" ,
+    "angular breadcrumb",
+    "Breadcrumbs",
+    "angular7 Breadcrumbs",
+    "angular 7 Breadcrumbs",
+    "angular 8 breadcrumb",
+    "angular8 Breadcrumbs",
+    "angular 8 Breadcrumbs"
+
+  ],
+  "bugs": {
+    "url": "https://github.com/rajaramtt/ng7-dynamic-breadcrumb/issues"
+  },
+  "author": "Raja Rama Mohan Thavalam",
+  "contributors": [
+    "Raja Rama Mohan Thavalam <rajarm.tavalam@gmail.com>"
+  ]
+}

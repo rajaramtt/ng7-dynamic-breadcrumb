@@ -6,6 +6,7 @@ import { Breadcrumb } from './breadcrumb.model';
 import { Ng7BootstrapBreadcrumbService } from './ng7-bootstrap-breadcrumb.service';
 
 @Component({
+// tslint:disable-next-line: component-selector
   selector: 'app-ng7-bootstrap-breadcrumb',
   templateUrl: './ng7-bootstrap-breadcrumb.component.html',
   styleUrls: ['./ng7-bootstrap-breadcrumb.component.css']

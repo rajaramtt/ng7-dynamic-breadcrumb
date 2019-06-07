@@ -3,27 +3,35 @@ import { ActivatedRoute, Router, NavigationEnd, PRIMARY_OUTLET, RoutesRecognized
 import { filter } from 'rxjs/operators';
 import { map, mergeMap } from 'rxjs/internal/operators';
 import { Breadcrumb } from './breadcrumb.model';
-import { Ng7MatBreadcrumbService } from './ng7-mat-breadcrumb.service';
-import { from } from 'rxjs';
+import { NgDynamicBreadcrumbService } from './ng-dynamic-breadcrumb.service';
+
 @Component({
 // tslint:disable-next-line: component-selector
-  selector: 'app-ng7-mat-breadcrumb',
-  templateUrl: './ng7-mat-breadcrumb.component.html',
-  styleUrls: ['./ng7-mat-breadcrumb.component.css']
+  selector: 'app-ng-dynamic-breadcrumb',
+  templateUrl: './ng-dynamic-breadcrumb.component.html',
+  styleUrls: ['./ng-dynamic-breadcrumb.component.css']
 })
-export class Ng7MatBreadcrumbComponent implements OnInit {
+export class NgDynamicBreadcrumbComponent implements OnInit {
+
   breadcrumb: Breadcrumb[] = [];
+  @Input() bgColor = '#eee';
+  @Input() fontSize = '18px';
+  @Input() fontColor = '#0275d8';
+  @Input() lastLinkColor = '#000';
+  @Input() symbol = ' / ';
+
+
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private ng7MatBreadcrumbService: Ng7MatBreadcrumbService
+    private ngDynamicBreadcrumbService: NgDynamicBreadcrumbService
   ) {
     this.breadCrumbData();
   }
 
   ngOnInit() {
-    this.ng7MatBreadcrumbService.breadcrumbLabels.subscribe((labelData) => {
+    this.ngDynamicBreadcrumbService.breadcrumbLabels.subscribe((labelData) => {
       for (const label in labelData) {
         if (labelData.hasOwnProperty(label)) {
           this.breadcrumb.map((crumb) => {
@@ -42,7 +50,6 @@ export class Ng7MatBreadcrumbComponent implements OnInit {
 
     });
   }
-
   breadCrumbData() {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
@@ -58,6 +65,7 @@ export class Ng7MatBreadcrumbComponent implements OnInit {
           const breadcrumb = (JSON.parse(JSON.stringify(route.snapshot.data.breadcrumb)));
           breadcrumb.map((crumb) => {
             const urlChunks = crumb.url.split('/');
+
             for (const chunk of urlChunks) {
               if (chunk.includes(':')) {
                 const paramID = chunk.replace(':', '');
@@ -78,6 +86,7 @@ export class Ng7MatBreadcrumbComponent implements OnInit {
               }
             }
 
+
           });
           this.breadcrumb = breadcrumb;
         } else {
@@ -86,3 +95,4 @@ export class Ng7MatBreadcrumbComponent implements OnInit {
       });
   }
 }
+
