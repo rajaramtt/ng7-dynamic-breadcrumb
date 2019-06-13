@@ -3,8 +3,8 @@
 
 ng-dynamic-breadcrumb is a module for [Angular](https://angular.io/) that generates a breadcrumb for any page of your application. It is based on the built-in [Angular router](https://angular.io/docs/ts/latest/guide/router.html).
 
-## [Demo  Example ](https://ng7-dynamic-breadcrumb.stackblitz.io/)
-## [Demo  Source Example ](https://stackblitz.com/edit/ng7-dynamic-breadcrumb)
+## [Demo  Example ](https://ng-dynamic-breadcrumb.stackblitz.io/)
+## [Demo  Source Example ](https://stackblitz.com/edit/ng-dynamic-breadcrumb)
 
 # Usage
 
@@ -134,6 +134,35 @@ constructor(private ngDynamicBreadcrumbService: NgDynamicBreadcrumbService) { }
 ngOnInit() {
   const breadcrumb =  {customText: 'This is Custom Text', dynamicText: 'Level 2 '};
   this.ngDynamicBreadcrumbService.updateBreadcrumbLabels(breadcrumb);
+  }
+```
+
+6. Update the Breadcrumb  using `NgDynamicBreadcrumbService`
+
+```js
+import { NgDynamicBreadcrumbService } from 'ng-dynamic-breadcrumb';
+constructor(private ngDynamicBreadcrumbService: NgDynamicBreadcrumbService) { }
+
+  updateBreadcrumb(): void {
+    const breadcrumbs  =  [
+      {
+        label: 'page {{pageOneID}}',
+        url: '/page1/:pageOneID'
+      },
+      {
+        label: 'page {{pageTwoID}}',
+        url: 'page1/:pageOneID/page2/:pageTwoID'
+      },
+      {
+        label: 'page {{pageThreeID}}',
+        url: 'page1/:pageOneID/page2/:pageTwoID/page3/:pageThreeID'
+      },
+      {
+        label: 'Update Breadcrumb',
+        url: ''
+      }
+    ];
+    this.ngDynamicBreadcrumbService.updateBreadcrumb(breadcrumbs);
   }
 ```
 
