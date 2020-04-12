@@ -12,7 +12,14 @@ import { from } from 'rxjs';
   styleUrls: ['./ng7-mat-breadcrumb.component.css']
 })
 export class Ng7MatBreadcrumbComponent implements OnInit {
+
   breadcrumb: Breadcrumb[] = [];
+  @Input() bgColor = '#eee';
+  @Input() fontSize = '18px';
+  @Input() fontColor = '#0275d8';
+  @Input() lastLinkColor = '#000';
+  @Input() symbol = ' / ';
+  params: { [key: string]: any; };
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -30,20 +37,23 @@ export class Ng7MatBreadcrumbComponent implements OnInit {
             const labelParams = crumb.label.match(/[^{{]+(?=\}})/g);
             if (labelParams) {
               for (const labelParam of labelParams) {
-                const dyanmicData = labelData[label];
+                const dynamicData = labelData[label];
                 if (labelParam === label) {
-                  crumb.label = crumb.label.replace('{{' + labelParam + '}}', dyanmicData);
+                  crumb.label = crumb.label.replace('{{' + labelParam + '}}', dynamicData);
                 }
               }
             }
           });
         }
       }
+    });
 
+    this.ng7MatBreadcrumbService.newBreadcrumb.subscribe((breadcrumb: Breadcrumb[]) => {
+      this.updateData(this.activatedRoute, breadcrumb);
     });
   }
 
-  breadCrumbData() {
+  breadCrumbData(): void {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .pipe(map(() => this.activatedRoute))
@@ -53,36 +63,44 @@ export class Ng7MatBreadcrumbComponent implements OnInit {
       }))
       .pipe(filter(route => route.outlet === PRIMARY_OUTLET))
       .subscribe(route => {
-
-        if (route.snapshot.data.breadcrumb) {
-          const breadcrumb = (JSON.parse(JSON.stringify(route.snapshot.data.breadcrumb)));
-          breadcrumb.map((crumb) => {
-            const urlChunks = crumb.url.split('/');
-            for (const chunk of urlChunks) {
-              if (chunk.includes(':')) {
-                const paramID = chunk.replace(':', '');
-                const routerParamID = route.snapshot.params[paramID];
-                crumb.url = crumb.url.replace(`:${paramID}`, routerParamID);
-              }
-            }
-
-            const labelParams = crumb.label.match(/[^{{]+(?=\}})/g);
-            if (labelParams) {
-              for (const labelParam of labelParams) {
-                const routerParamID = route.snapshot.params[labelParam.trim()];
-                if (routerParamID) {
-                  crumb.label = crumb.label.replace('{{' + labelParam + '}}', routerParamID);
-                } else {
-                  // crumb.label = crumb.label.replace('{{' + labelParam + '}}', '');
-                }
-              }
-            }
-
-          });
-          this.breadcrumb = breadcrumb;
-        } else {
-          this.breadcrumb = [];
-        }
+        this.params = route.snapshot.params;
+        this.updateData(route, null);
       });
+  }
+
+  private updateData(route, newBreadcrumb): void {
+    if (route.snapshot.data.breadcrumb || newBreadcrumb) {
+      const data = route.snapshot.data.breadcrumb ? route.snapshot.data.breadcrumb : newBreadcrumb;
+      const breadcrumb = (JSON.parse(JSON.stringify(data)));
+      breadcrumb.map((crumb) => {
+
+        const urlChunks = crumb.url.split('/');
+        for (const chunk of urlChunks) {
+          if (chunk.includes(':')) {
+            const paramID = chunk.replace(':', '');
+            // const routerParamID = route.snapshot.params[paramID];
+            const routerParamID = this.params[paramID];
+            crumb.url = crumb.url.replace(`:${paramID}`, routerParamID);
+          }
+        }
+
+        const labelParams = crumb.label.match(/[^{{]+(?=\}})/g);
+        if (labelParams) {
+          for (const labelParam of labelParams) {
+            // const routerParamID = route.snapshot.params[labelParam.trim()];
+            const routerParamID = this.params[labelParam.trim()];
+            if (routerParamID) {
+              crumb.label = crumb.label.replace('{{' + labelParam + '}}', routerParamID);
+            } else {
+              // crumb.label = crumb.label.replace('{{' + labelParam + '}}', '');
+            }
+          }
+        }
+
+      });
+      this.breadcrumb = breadcrumb;
+    } else {
+      this.breadcrumb = [];
+    }
   }
 }

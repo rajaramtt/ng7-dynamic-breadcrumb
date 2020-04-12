@@ -1,9 +1,9 @@
-<nav aria-label="breadcrumb">
+<nav aria-label="breadcrumb" [ngStyle]="{'background-color': bgColor}">
     <ol class="breadcrumb" *ngIf="breadcrumb.length">
         <ng-container *ngFor="let item of breadcrumb; let i = index">
-            <li class="breadcrumb-item" [ngClass]="{'active': breadcrumb.length !== i+1}">
-                <a *ngIf="item?.url" [routerLink]="item?.url">{{ item.label }}</a>
-                <span *ngIf="!item?.url">{{ item.label }}</span>
+            <li class="breadcrumb-item" [ngClass]="{'active': breadcrumb.length !== i+1}" [ngStyle]="{'font-size': fontSize}">
+                <a *ngIf="item?.url" [routerLink]="item?.url"  [ngStyle]="{'color': fontColor}">{{ item.label }}</a>
+                <span *ngIf="!item?.url" [ngStyle]="{'color': lastLinkColor}">{{ item.label }}</span>
             </li>
         </ng-container>
     </ol>
