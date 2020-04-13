@@ -34,10 +34,25 @@ ng7-mat-breadcrumb is a Angular Material module for [Angular](https://angular.io
 
 
 
-## Help/Assistance
+## Questions & Issues
+
+Report bugs/problems by creating an issue [creating an issue](https://github.com/rajaramtt/ng7-dynamic-breadcrumb/issues)
+
+
+## Contribute
+
+ Pick one of the issues from the  [issue list](https://github.com/rajaramtt/ng7-dynamic-breadcrumb/issues) to get started.
+
+## Developer
 
 Developer: Raja Rama Mohan Thavalam <rajaram.tavalam@gmail.com>  
 
+
+| Raja Rama Mohan Thavalam | 
+| ----------------- |
+| ![Raja Rama Mohan Thavalam][rajaramtt] |
+
+[rajaramtt]: https://avatars1.githubusercontent.com/u/17231665
 
 ## License
 
