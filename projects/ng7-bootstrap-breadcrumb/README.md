@@ -19,6 +19,7 @@ Choose the version corresponding to your Angular version:
 
  Angular     | ng7-bootstrap-breadcrumb
  ----------- | ------------------- 
+ 9           | 3.x+   
  8           | 2.x+               
  7           | 1.x   
 
@@ -96,7 +97,18 @@ const routes: Routes = [
 ```html
 <app-ng7-bootstrap-breadcrumb></app-ng7-bootstrap-breadcrumb>
 <router-outlet></router-outlet>
+
 ```
+## Input parameters
+
+| Input | Required | Details |
+| ---- | ---- | ---- |
+| bgColor | Optional | To set background-color for  Breadcrumb, default #eee |
+| fontSize | Optional | To set size of  Breadcrumb,  default 18px |
+| fontColor | Optional | To set color of  Breadcrumb,  default #0275d8 |
+| lastLinkColor | Optional | To set color of last link  Breadcrumb,  default #000 |
+| symbol | Optional | To set symbol of Breadcrumb,  default / |
+
 
 5.Set the value using `Ng7BootstrapBreadcrumbService`
 
@@ -109,9 +121,56 @@ ngOnInit() {
   }
 ```
 
-## Help/Assistance
+6. Update the Breadcrumb  using `Ng7MatBreadcrumbService`
+
+
+```js
+import { Ng7BootstrapBreadcrumbService } from 'ng7-bootstrap-breadcrumb';
+constructor(private ng7BootstrapBreadcrumbService: Ng7BootstrapBreadcrumbService) { }
+
+  updateBreadcrumb(): void {
+    const breadcrumbs  =  [
+      {
+        label: 'page {{pageOneID}}',
+        url: '/page1/:pageOneID'
+      },
+      {
+        label: 'page {{pageTwoID}}',
+        url: 'page1/:pageOneID/page2/:pageTwoID'
+      },
+      {
+        label: 'page {{pageThreeID}}',
+        url: 'page1/:pageOneID/page2/:pageTwoID/page3/:pageThreeID'
+      },
+      {
+        label: 'Update Breadcrumb',
+        url: ''
+      }
+    ];
+    this.ng7BootstrapBreadcrumbService.updateBreadcrumb(breadcrumbs);
+  }
+```
+
+
+## Questions & Issues
+
+Report bugs/problems by creating an issue [creating an issue](https://github.com/rajaramtt/ng7-dynamic-breadcrumb/issues)
+
+
+## Contribute
+
+ Pick one of the issues from the  [issue list](https://github.com/rajaramtt/ng7-dynamic-breadcrumb/issues) to get started.
+
+## Developer
 
 Developer: Raja Rama Mohan Thavalam <rajaram.tavalam@gmail.com>  
+
+
+| Raja Rama Mohan Thavalam | 
+| ----------------- |
+| ![Raja Rama Mohan Thavalam][rajaramtt] |
+
+[rajaramtt]: https://avatars1.githubusercontent.com/u/17231665
 
 
 ## License

@@ -1,11 +1,11 @@
-<mat-toolbar class="mat-bread-crumb">
+<mat-toolbar class="mat-bread-crumb" [ngStyle]="{'background-color': bgColor}">
     <mat-list class="mat-bread-crumb-list" *ngIf="breadcrumb.length">
         <mat-list-item>
             <span class="mat-bread-crumb-spacer">
                 <span *ngFor="let item of breadcrumb; let i = index">
-                    <a *ngIf="item?.url" [routerLink]="item?.url" class="mat-bread-crumb-list-item">{{ item.label }}</a>
-                    <span *ngIf="!item?.url" class="mat-bread-crumb-list-item">{{ item.label }}</span>
-                    <span *ngIf="breadcrumb.length !== i+1"> / </span>
+                    <a *ngIf="item?.url" [routerLink]="item?.url" class="mat-bread-crumb-list-item" [ngStyle]="{'font-size': fontSize}" [ngStyle]="{'color': fontColor}">{{ item.label }}</a>
+                    <span *ngIf="!item?.url" class="mat-bread-crumb-list-item" [ngStyle]="{'font-size': fontSize}"  [ngStyle]="{'color': lastLinkColor}">{{ item.label }}</span>
+                    <span *ngIf="breadcrumb.length !== i+1">{{symbol}}</span>
                 </span>
             </span>
         </mat-list-item>

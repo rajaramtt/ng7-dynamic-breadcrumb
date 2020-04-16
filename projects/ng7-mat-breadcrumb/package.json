@@ -1,11 +1,11 @@
 {
   "name": "ng7-mat-breadcrumb",
   "description": "Angular 8  Material  Breadcrumb NPM Module",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0",
-    "@angular/material": "^8.0.0"
+    "@angular/common": "^9.0.0",
+    "@angular/core": "^9.0.0",
+    "@angular/material": "^9.0.0"
   },
   "license": "MIT",
   "repository": {
@@ -24,7 +24,10 @@
     "angular 7 material ",
     "angular 8 breadcrumb",
     "angular8 material Breadcrumbs",
-    "angular 8 material "
+    "angular 8 material ",
+    "angular 9 breadcrumb",
+    "angular9 material Breadcrumbs",
+    "angular 9 material" 
   ],
   "bugs": {
     "url": "https://github.com/rajaramtt/ng7-dynamic-breadcrumb/issues"

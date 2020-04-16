@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/ng7-dynamic-breadcrumb-lib",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -51,6 +52,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -143,6 +148,11 @@
           "options": {
             "tsConfig": "projects/ng7-dynamic-breadcrumb/tsconfig.lib.json",
             "project": "projects/ng7-dynamic-breadcrumb/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng7-dynamic-breadcrumb/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -178,6 +188,11 @@
           "options": {
             "tsConfig": "projects/ng7-bootstrap-breadcrumb/tsconfig.lib.json",
             "project": "projects/ng7-bootstrap-breadcrumb/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng7-bootstrap-breadcrumb/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -213,6 +228,11 @@
           "options": {
             "tsConfig": "projects/ng7-mat-breadcrumb/tsconfig.lib.json",
             "project": "projects/ng7-mat-breadcrumb/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng7-mat-breadcrumb/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -248,6 +268,11 @@
           "options": {
             "tsConfig": "projects/ng-dynamic-breadcrumb/tsconfig.lib.json",
             "project": "projects/ng-dynamic-breadcrumb/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-dynamic-breadcrumb/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -273,5 +298,8 @@
       }
     }
   },
-  "defaultProject": "ng7-dynamic-breadcrumb-lib"
+  "defaultProject": "ng7-dynamic-breadcrumb-lib",
+  "cli": {
+    "analytics": false
+  }
 }

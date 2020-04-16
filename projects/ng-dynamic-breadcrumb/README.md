@@ -19,6 +19,7 @@ Choose the version corresponding to your Angular version:
 
  Angular     | ng-dynamic-breadcrumb
  ----------- | ------------------- 
+ 9           | 3.x+                 
  8           | 2.x+               
  7           | 1.x   
 
@@ -166,9 +167,26 @@ constructor(private ngDynamicBreadcrumbService: NgDynamicBreadcrumbService) { }
   }
 ```
 
-## Help/Assistance
+## Questions & Issues
+
+Report bugs/problems by creating an issue [creating an issue](https://github.com/rajaramtt/ng7-dynamic-breadcrumb/issues)
+
+
+## Contribute
+
+ Pick one of the issues from the  [issue list](https://github.com/rajaramtt/ng7-dynamic-breadcrumb/issues) to get started.
+
+## Developer
 
 Developer: Raja Rama Mohan Thavalam <rajaram.tavalam@gmail.com>  
+
+
+| Raja Rama Mohan Thavalam | 
+| ----------------- |
+| ![Raja Rama Mohan Thavalam][rajaramtt] |
+
+[rajaramtt]: https://avatars1.githubusercontent.com/u/17231665
+
 
 
 ## License
