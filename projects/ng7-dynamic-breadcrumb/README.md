@@ -19,6 +19,8 @@ Choose the version corresponding to your Angular version:
 
  Angular     | ng7-dynamic-breadcrumb
  ----------- | ------------------- 
+ 10          | 4.x+               
+ 9           | 3.x   
  8           | 2.x+               
  7           | 1.x   
 
