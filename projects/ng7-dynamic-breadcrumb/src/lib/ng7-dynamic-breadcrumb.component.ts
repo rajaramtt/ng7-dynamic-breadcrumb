@@ -53,7 +53,7 @@ export class Ng7DynamicBreadcrumbComponent implements OnInit {
       this.updateData(this.activatedRoute, breadcrumb);
     });
   }
-  
+
   breadCrumbData(): void {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
