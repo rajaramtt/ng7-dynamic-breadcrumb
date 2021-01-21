@@ -50,7 +50,9 @@ export class Ng7DynamicBreadcrumbComponent implements OnInit {
     });
 
     this.ng7DynamicBreadcrumbService.newBreadcrumb.subscribe((breadcrumb: Breadcrumb[]) => {
-      this.updateData(this.activatedRoute, breadcrumb);
+      if (breadcrumb.length > 0) {
+        this.updateData(this.activatedRoute, breadcrumb);
+      }
     });
   }
 

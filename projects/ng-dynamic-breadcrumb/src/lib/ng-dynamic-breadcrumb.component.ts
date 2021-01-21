@@ -50,7 +50,9 @@ export class NgDynamicBreadcrumbComponent implements OnInit {
     });
 
     this.ngDynamicBreadcrumbService.newBreadcrumb.subscribe((breadcrumb: Breadcrumb[]) => {
-      this.updateData(this.activatedRoute, breadcrumb);
+      if (breadcrumb.length > 0) {
+        this.updateData(this.activatedRoute, breadcrumb);
+      }
     });
   }
   breadCrumbData(): void {
