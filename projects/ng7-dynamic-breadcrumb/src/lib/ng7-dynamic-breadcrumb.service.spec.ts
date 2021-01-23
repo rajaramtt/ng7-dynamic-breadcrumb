@@ -6,7 +6,7 @@ describe('Ng7DynamicBreadcrumbService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: Ng7DynamicBreadcrumbService = TestBed.get(Ng7DynamicBreadcrumbService);
+    const service: Ng7DynamicBreadcrumbService = TestBed.inject(Ng7DynamicBreadcrumbService);
     expect(service).toBeTruthy();
   });
 });

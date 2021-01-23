@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { Ng7DynamicBreadcrumbComponent } from './ng7-dynamic-breadcrumb.component';
 
@@ -6,7 +6,7 @@ describe('Ng7DynamicBreadcrumbComponent', () => {
   let component: Ng7DynamicBreadcrumbComponent;
   let fixture: ComponentFixture<Ng7DynamicBreadcrumbComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ Ng7DynamicBreadcrumbComponent ]
     })

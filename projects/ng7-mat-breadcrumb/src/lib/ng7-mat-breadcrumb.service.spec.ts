@@ -6,7 +6,7 @@ describe('Ng7MatBreadcrumbService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: Ng7MatBreadcrumbService = TestBed.get(Ng7MatBreadcrumbService);
+    const service: Ng7MatBreadcrumbService = TestBed.inject(Ng7MatBreadcrumbService);
     expect(service).toBeTruthy();
   });
 });
