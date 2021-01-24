@@ -1,7 +1,7 @@
 {
   "name": "ng7-bootstrap-breadcrumb",
   "description": "Angular 8 bootstrap  Dynamic Breadcrumb",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "peerDependencies": {
     "@angular/common": "^10.0.0",
     "@angular/core": "^10.0.0",
