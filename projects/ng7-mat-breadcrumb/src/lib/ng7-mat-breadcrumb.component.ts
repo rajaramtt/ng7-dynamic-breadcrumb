@@ -49,7 +49,9 @@ export class Ng7MatBreadcrumbComponent implements OnInit {
     });
 
     this.ng7MatBreadcrumbService.newBreadcrumb.subscribe((breadcrumb: Breadcrumb[]) => {
-      this.updateData(this.activatedRoute, breadcrumb);
+      if (breadcrumb.length > 0) {
+        this.updateData(this.activatedRoute, breadcrumb);
+      }
     });
   }
 
