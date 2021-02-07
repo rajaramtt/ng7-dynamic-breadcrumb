@@ -1,10 +1,10 @@
 {
   "name": "ng-dynamic-breadcrumb",
-  "description": "Angular 10 Dynamic Breadcrumb",
-  "version": "4.1.0",
+  "description": "Angular 11 Dynamic Breadcrumb",
+  "version": "5.0.1",
   "peerDependencies": {
-    "@angular/common": "^10.0.0",
-    "@angular/core": "^10.0.0"
+    "@angular/common": "^11.0.0",
+    "@angular/core": "^11.0.0"
   },
   "main": "bundles/ng-dynamic-breadcrumb.umd.js",
   "module": "fesm5/ng-dynamic-breadcrumb.js",
@@ -40,7 +40,9 @@
     "angular9 Breadcrumbs",
     "angular 9 Breadcrumbs",
     "angular10 Breadcrumbs",
-    "angular 10 Breadcrumbs"
+    "angular 10 Breadcrumbs",
+    "angular11 Breadcrumbs",
+    "angular 11 Breadcrumbs"
 
 
   ],

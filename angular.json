@@ -40,7 +40,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -143,7 +142,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ng7-dynamic-breadcrumb/tsconfig.lib.json",
             "project": "projects/ng7-dynamic-breadcrumb/ng-package.json"
@@ -183,7 +182,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ng7-bootstrap-breadcrumb/tsconfig.lib.json",
             "project": "projects/ng7-bootstrap-breadcrumb/ng-package.json"
@@ -223,7 +222,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ng7-mat-breadcrumb/tsconfig.lib.json",
             "project": "projects/ng7-mat-breadcrumb/ng-package.json"
@@ -263,7 +262,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ng-dynamic-breadcrumb/tsconfig.lib.json",
             "project": "projects/ng-dynamic-breadcrumb/ng-package.json"
