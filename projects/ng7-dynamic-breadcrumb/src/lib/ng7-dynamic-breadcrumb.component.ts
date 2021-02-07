@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd, PRIMARY_OUTLET, RoutesRecognized } from '@angular/router';
-import { filter } from 'rxjs/operators';
-import { map, mergeMap } from 'rxjs/internal/operators';
+import { filter, map, mergeMap } from 'rxjs/operators';
 import { Breadcrumb } from './breadcrumb.model';
 import { Ng7DynamicBreadcrumbService } from './ng7-dynamic-breadcrumb.service';
 
