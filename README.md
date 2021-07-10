@@ -45,7 +45,7 @@ Report bugs/problems by creating an issue [creating an issue](https://github.com
 
 ## Developer
 
-Developer: Raja Rama Mohan Thavalam <rajaram.tavalam@gmail.com>  
+Developer: Raja Rama Mohan Thavalam 
 
 
 | Raja Rama Mohan Thavalam | 
