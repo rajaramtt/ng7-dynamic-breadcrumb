@@ -1,7 +1,7 @@
 <ul class="custom-bread-crumb" [ngStyle]="{'background-color': bgColor}">
   <span *ngFor="let item of breadcrumb; let i = index">
       <li [ngStyle]="{'font-size': fontSize}">
-          <a *ngIf="item?.url" [routerLink]="item?.url" [ngStyle]="{'color': fontColor}">{{ item.label }}</a>
+          <a *ngIf="item?.url" [routerLink]="item?.url" [queryParams]="item?.queryParams" [ngStyle]="{'color': fontColor}">{{ item.label }}</a>
           <span *ngIf="!item?.url" [ngStyle]="{'color': lastLinkColor}">{{ item.label }}</span>
           <span class="line" *ngIf="breadcrumb.length !== i+1">{{symbol}}</span>
       </li>
