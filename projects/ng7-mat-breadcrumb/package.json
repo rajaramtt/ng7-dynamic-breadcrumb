@@ -1,6 +1,6 @@
 {
   "name": "ng7-mat-breadcrumb",
-  "description": "Angular 12 Material  Breadcrumb NPM Module",
+  "description": "Angular 14 Material  Breadcrumb NPM Module",
   "version": "8.0.0",
   "peerDependencies": {
     "@angular/common": "^14.0.0",
