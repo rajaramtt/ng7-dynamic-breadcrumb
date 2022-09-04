@@ -1,5 +1,5 @@
-
 export interface Breadcrumb {
-    label: string;
-    url: string;
-  }
+  label: string;
+  url: string;
+  queryParams?: { [key: string]: string };
+}
