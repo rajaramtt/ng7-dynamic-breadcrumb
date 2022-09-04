@@ -1,10 +1,10 @@
 {
   "name": "ng7-dynamic-breadcrumb",
-  "description": "Angular 12 Dynamic Breadcrumb",
-  "version": "6.0.0",
+  "description": "Angular 14 Dynamic Breadcrumb",
+  "version": "8.0.0",
   "peerDependencies": {
-    "@angular/common": "^12.0.0",
-    "@angular/core": "^12.0.0"
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0"
   },
   "main": "bundles/ng7-dynamic-breadcrumb.umd.js",
   "module": "fesm5/ng7-dynamic-breadcrumb.js",
