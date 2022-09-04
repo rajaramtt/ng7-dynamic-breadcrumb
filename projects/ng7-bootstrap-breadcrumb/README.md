@@ -1,7 +1,7 @@
 # ng7-bootstrap-breadcrumb
 
 
-ng7-bootstrap-breadcrumb is a Angular7 bootstrap module for [Angular](https://angular.io/) that generates a Angular7 bootstrap breadcrumb for any page of your application. It is based on the built-in [Angular router](https://angular.io/docs/ts/latest/guide/router.html).
+ng7-bootstrap-breadcrumb is a Angular 14 bootstrap module for [Angular](https://angular.io/) that generates a Angular7 bootstrap breadcrumb for any page of your application. It is based on the built-in [Angular router](https://angular.io/docs/ts/latest/guide/router.html).
 
 ## [Demo  Example ](https://ng7-bootstrap-breadcrumb.stackblitz.io)
 ## [Demo  Source Example ](https://stackblitz.com/edit/ng7-bootstrap-breadcrumb)
@@ -19,6 +19,7 @@ Choose the version corresponding to your Angular version:
 
  Angular     | ng7-bootstrap-breadcrumb
  ----------- | ------------------- 
+ 14          | 8.x+    
  12          | 6.x+    
  11          | 5.x+   
  10          | 4.x+   
@@ -181,5 +182,5 @@ Developer: Raja Rama Mohan Thavalam
 
 (The MIT License)
 
-Copyright (c) 2021 Thavalam Raja Rama Mohan 
+Copyright (c) 2022 Thavalam Raja Rama Mohan 
 
