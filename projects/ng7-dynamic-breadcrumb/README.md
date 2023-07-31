@@ -19,6 +19,8 @@ Choose the version corresponding to your Angular version:
 
  Angular     | ng7-dynamic-breadcrumb
  ----------- | ------------------- 
+ 16          | 10.x+    
+ 15          | n/a, reserved 9 if required 
  14          | 8.x+    
  12          | 6.x+    
  11          | 5.x+   
@@ -168,4 +170,4 @@ Developer: Raja Rama Mohan Thavalam
 
 (The MIT License)
 
-Copyright (c) 2022 Thavalam Raja Rama Mohan 
+Copyright (c) 2023 Thavalam Raja Rama Mohan 
