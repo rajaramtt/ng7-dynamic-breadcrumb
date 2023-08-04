@@ -301,7 +301,6 @@
       }
     }
   },
-  "defaultProject": "ng7-dynamic-breadcrumb-lib",
   "cli": {
     "analytics": false
   }
