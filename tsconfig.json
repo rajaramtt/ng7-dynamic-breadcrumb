@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es5",
+    "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -42,6 +42,7 @@
       "ng-dynamic-breadcrumb/*": [
         "dist/ng-dynamic-breadcrumb/*"
       ]
-    }
+    },
+    "useDefineForClassFields": false
   }
 }
